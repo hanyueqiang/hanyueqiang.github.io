@@ -230,6 +230,103 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/16/第二篇博客/" itemprop="url">
+                  编写jQuery代码常见问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-16T15:31:39+08:00" content="2016-10-16">
+              2016-10-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Window-onload只能写一次-重复会被后面的干掉"><a href="#Window-onload只能写一次-重复会被后面的干掉" class="headerlink" title="Window.onload只能写一次,重复会被后面的干掉"></a>Window.onload只能写一次,重复会被后面的干掉</h2><h3 id="页面所有的标签-图片-外部引入加载后才触发-document-ready-DOM基本标签加载后就触发可以写多个-document-ready-和-function-一样-window-onload页面完全加载后才触发该件-document-ready-function-只要DOM元素加载完就触发"><a href="#页面所有的标签-图片-外部引入加载后才触发-document-ready-DOM基本标签加载后就触发可以写多个-document-ready-和-function-一样-window-onload页面完全加载后才触发该件-document-ready-function-只要DOM元素加载完就触发" class="headerlink" title="页面所有的标签,图片,外部引入加载后才触发$(document).ready(),DOM基本标签加载后就触发可以写多个$(document).ready()和$(function)一样.window.onload页面完全加载后才触发该件,$(document).ready(function(){})`;只要DOM元素加载完就触发."></a>页面所有的标签,图片,外部引入加载后才触发<code>$(document).ready()</code>,DOM基本标签加载后就触发可以写多个<code>$(document).ready()</code>和<code>$(function)一样.</code>window.onload<code>页面完全加载后才触发该件,</code>$(document).ready(function(){})`;只要DOM元素加载完就触发.</h3><h2 id="jQuery中引入文件注意问题"><a href="#jQuery中引入文件注意问题" class="headerlink" title="jQuery中引入文件注意问题"></a>jQuery中引入文件注意问题</h2><h3 id="先引入文件-然后再使用开发的时候引入正常的jquery文件和压缩版的文件都没有问题-建议-开发用普通版-上线用压缩版"><a href="#先引入文件-然后再使用开发的时候引入正常的jquery文件和压缩版的文件都没有问题-建议-开发用普通版-上线用压缩版" class="headerlink" title="先引入文件,然后再使用开发的时候引入正常的jquery文件和压缩版的文件都没有问题,建议:开发用普通版,上线用压缩版."></a>先引入文件,然后再使用开发的时候引入正常的jquery文件和压缩版的文件都没有问题,建议:开发用普通版,上线用压缩版.</h3><h2 id="Jquery对象和DOM对象互转"><a href="#Jquery对象和DOM对象互转" class="headerlink" title="Jquery对象和DOM对象互转"></a>Jquery对象和DOM对象互转</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(function () &#123;</div><div class="line">    var bt1=$("#btn")[0];//由jquery对象转成了dom对象</div><div class="line">    var bt2=document.getElementById("btn");//对象</div><div class="line">  console.log(bt1==bt2);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="层级选择器注意问题"><a href="#层级选择器注意问题" class="headerlink" title="层级选择器注意问题"></a>层级选择器注意问题</h2><h3 id="获取当前元素的相邻元素-“div-span”"><a href="#获取当前元素的相邻元素-“div-span”" class="headerlink" title="获取当前元素的相邻元素:$(“div + span”)"></a>获取当前元素的相邻元素:$(“div + span”)</h3><h3 id="获取当前元素后面所有元素-“div-span”"><a href="#获取当前元素后面所有元素-“div-span”" class="headerlink" title="获取当前元素后面所有元素$(“div ~ span”)"></a>获取当前元素后面所有元素$(“div ~ span”)</h3>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/16/第二篇博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/15/我的第一篇博客/" itemprop="url">
                   如何用hexo创建自己的博客
                 </a>
@@ -450,7 +547,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
