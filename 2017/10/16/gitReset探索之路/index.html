@@ -84,19 +84,21 @@
 
 
 
-<meta name="description" content="json2.js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。在页面中添加json2.js的引用。1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;JS/json2.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-序列化方法(转成字符串)">
+<meta name="description" content="利用闲暇时间整理下最近工作中遇到的问题，前几天同事问我他的代码commit过后没有先拉代码直接push到远程了，这种情况我以前也干过，当时用此命令解决的这个问题，所以我没有思索的跟他说用git reset --hard {id}来解决；结果就是遇到大麻烦；git reset --hard 命令解释：强制返回到某次提交前的源码状态；用此命令一定要慎重！再慎重！以下是git reset时几种情况：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="json2.js使用">
-<meta property="og:url" content="http://yoursite.com/2017/03/31/json2-js使用/index.html">
+<meta property="og:title" content="gitReset探索之路">
+<meta property="og:url" content="http://yoursite.com/2017/10/16/gitReset探索之路/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="json2.js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。在页面中添加json2.js的引用。1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;JS/json2.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-序列化方法(转成字符串)">
-<meta property="og:updated_time" content="2017-03-31T15:55:35.719Z">
+<meta property="og:description" content="利用闲暇时间整理下最近工作中遇到的问题，前几天同事问我他的代码commit过后没有先拉代码直接push到远程了，这种情况我以前也干过，当时用此命令解决的这个问题，所以我没有思索的跟他说用git reset --hard {id}来解决；结果就是遇到大麻烦；git reset --hard 命令解释：强制返回到某次提交前的源码状态；用此命令一定要慎重！再慎重！以下是git reset时几种情况：">
+<meta property="og:image" content="http://yoursite.com/images/1.png">
+<meta property="og:image" content="http://yoursite.com/images/2.png">
+<meta property="og:image" content="http://yoursite.com/images/3.png">
+<meta property="og:image" content="http://yoursite.com/images/4.png">
+<meta property="og:updated_time" content="2017-10-16T14:24:22.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="json2.js使用">
-<meta name="twitter:description" content="json2.js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。在页面中添加json2.js的引用。1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;JS/json2.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-序列化方法(转成字符串)">
+<meta name="twitter:title" content="gitReset探索之路">
+<meta name="twitter:description" content="利用闲暇时间整理下最近工作中遇到的问题，前几天同事问我他的代码commit过后没有先拉代码直接push到远程了，这种情况我以前也干过，当时用此命令解决的这个问题，所以我没有思索的跟他说用git reset --hard {id}来解决；结果就是遇到大麻烦；git reset --hard 命令解释：强制返回到某次提交前的源码状态；用此命令一定要慎重！再慎重！以下是git reset时几种情况：">
+<meta name="twitter:image" content="http://yoursite.com/images/1.png">
 
 
 
@@ -114,7 +116,7 @@
   };
 </script>
 
-  <title> json2.js使用 | Hexo </title>
+  <title> gitReset探索之路 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +236,7 @@
             
             
               
-                json2.js使用
+                gitReset探索之路
               
             
           </h1>
@@ -246,8 +248,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-31T23:54:23+08:00" content="2017-03-31">
-              2017-03-31
+            <time itemprop="dateCreated" datetime="2017-10-16T22:18:10+08:00" content="2017-10-16">
+              2017-10-16
             </time>
           </span>
 
@@ -274,11 +276,20 @@
       
 
       
-        <h3 id="json2-js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。"><a href="#json2-js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。" class="headerlink" title="json2.js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。"></a>json2.js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。</h3><h3 id="在页面中添加json2-js的引用。"><a href="#在页面中添加json2-js的引用。" class="headerlink" title="在页面中添加json2.js的引用。"></a>在页面中添加json2.js的引用。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;JS/json2.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<h3 id="序列化方法-转成字符串"><a href="#序列化方法-转成字符串" class="headerlink" title="序列化方法(转成字符串)"></a>序列化方法(转成字符串)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var jsonObj = &#123; id: &apos;01&apos;,name:&apos;Tome&apos;&#125;;</div><div class="line">json.stringify(jsonObj);</div></pre></td></tr></table></figure>
-<h3 id="反序列化方法"><a href="#反序列化方法" class="headerlink" title="反序列化方法"></a>反序列化方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var jsonstring = &apos;&#123;id:&apos;01&apos;,name:&apos;tome&apos;&#125;&apos;</div><div class="line">JSon.parse(jsonString);</div></pre></td></tr></table></figure>
-<h3 id="json2-js的源码地址："><a href="#json2-js的源码地址：" class="headerlink" title="json2.js的源码地址："></a>json2.js的源码地址：</h3><p><a href="https://github.com/douglascrockford/JSON-js" target="_blank" rel="external">https://github.com/douglascrockford/JSON-js</a></p>
-
+        <blockquote>
+<p>利用闲暇时间整理下最近工作中遇到的问题，前几天同事问我他的代码commit过后没有先拉代码直接push到远程了，这种情况我以前也干过，当时用此命令解决的这个问题，所以我没有思索的跟他说用<code>git reset --hard {id}</code>来解决；结果就是遇到大麻烦；<code>git reset --hard</code> 命令解释：强制返回到某次提交前的源码状态；用此命令一定要慎重！再慎重！以下是<code>git reset</code>时几种情况：</p>
+<h3 id="一-commit了全部修改内容-使用git-reset-hard-后情况"><a href="#一-commit了全部修改内容-使用git-reset-hard-后情况" class="headerlink" title="一.commit了全部修改内容 使用git reset --hard 后情况"></a>一.commit了全部修改内容 使用<code>git reset --hard</code> 后情况</h3><p>下图是我新建一个文件，修改了两个文件</p>
+</blockquote>
+<p><img src="/images/1.png" alt="Alt text"></p>
+<p>然后<code>add commit</code> 后<code>git log</code> 查看我commit的记录new hhh.js</p>
+<p><img src="/images/2.png" alt="Alt text"></p>
+<p>我们使用<code>git reset --hard 2460d...</code> ，即使我们在这之前push或者拉代码都会回退到这个版本之前，但是commit的代码依然存在，所以这个没有问题；</p>
+<h3 id="二-commit了部分代码，另一部分add了但没有commit"><a href="#二-commit了部分代码，另一部分add了但没有commit" class="headerlink" title="二.commit了部分代码，另一部分add了但没有commit"></a>二.commit了部分代码，另一部分add了但没有commit</h3><p>我只commit一个文件，add了另外两个文件；</p>
+<p><img src="/images/3.png" alt="Alt text"></p>
+<p>我们使用<code>git reset --hard {id}</code> 过后我们add的东西不见了，是不挺着急，这时候你用<code>git reflog</code> 查看版本记录再次回滚到commit记录下，发现没鸟用；这时候我们可以执行<code>git fsck --lost-found</code> 命令，然后你就可以在本地项目文件中路径为.git/lost-found/other中找到它们，你会发现你add的文件竟然藏在那里，是不是感觉棒棒哒！也可以通过<code>find .git/objects -type f | xargs ls -lt | sed 30q</code>这个命令，你就可以找到最近被你add到本地仓库的30个文件（切记不要太多，你会晕的；</p>
+<p><img src="/images/4.png" alt="Alt text"></p>
+<h3 id="三-commit了部分代码，另一部分没有add；"><a href="#三-commit了部分代码，另一部分没有add；" class="headerlink" title="三.commit了部分代码，另一部分没有add；"></a>三.commit了部分代码，另一部分没有add；</h3><p>执行<code>git reset --hard</code>后等同于执行delete命令一样（除非你能逆天）；这也是我同事遇到情况，但幸好他用VS Code编辑器有历史对比救了他一命，不然真的要从新写了！如果有哪位大神对这种情况有好的解决办法，求指教！</p>
+<h3 id="最后，一定要养成commit习惯！即使不commit也要多git-add几次也无妨！"><a href="#最后，一定要养成commit习惯！即使不commit也要多git-add几次也无妨！" class="headerlink" title="最后，一定要养成commit习惯！即使不commit也要多git add几次也无妨！"></a>最后，一定要养成commit习惯！即使不commit也要多git add几次也无妨！</h3>
       
     </div>
 
@@ -302,17 +313,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/16/第三篇博客/" rel="next" title="编写jQuery代码常见问题(二)">
-                <i class="fa fa-chevron-left"></i> 编写jQuery代码常见问题(二)
+              <a href="/2017/05/10/cookie的使用/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/10/cookie的使用/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -412,7 +419,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#json2-js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。"><span class="nav-number">1.</span> <span class="nav-text">json2.js提供了json的序列化和反序列化方法，可以将一个json对象转换成json字符串，也可以将一个json字符串转换成一个json对象。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在页面中添加json2-js的引用。"><span class="nav-number">2.</span> <span class="nav-text">在页面中添加json2.js的引用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列化方法-转成字符串"><span class="nav-number">3.</span> <span class="nav-text">序列化方法(转成字符串)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反序列化方法"><span class="nav-number">4.</span> <span class="nav-text">反序列化方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json2-js的源码地址："><span class="nav-number">5.</span> <span class="nav-text">json2.js的源码地址：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-commit了全部修改内容-使用git-reset-hard-后情况"><span class="nav-number">1.</span> <span class="nav-text">一.commit了全部修改内容 使用git reset --hard 后情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-commit了部分代码，另一部分add了但没有commit"><span class="nav-number">2.</span> <span class="nav-text">二.commit了部分代码，另一部分add了但没有commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-commit了部分代码，另一部分没有add；"><span class="nav-number">3.</span> <span class="nav-text">三.commit了部分代码，另一部分没有add；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后，一定要养成commit习惯！即使不commit也要多git-add几次也无妨！"><span class="nav-number">4.</span> <span class="nav-text">最后，一定要养成commit习惯！即使不commit也要多git add几次也无妨！</span></a></li></ol></div>
             
           </div>
         </section>

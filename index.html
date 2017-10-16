@@ -230,6 +230,112 @@
             
               
                 
+                <a class="post-title-link" href="/2017/10/16/gitReset探索之路/" itemprop="url">
+                  gitReset探索之路
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-10-16T22:18:10+08:00" content="2017-10-16">
+              2017-10-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>利用闲暇时间整理下最近工作中遇到的问题，前几天同事问我他的代码commit过后没有先拉代码直接push到远程了，这种情况我以前也干过，当时用此命令解决的这个问题，所以我没有思索的跟他说用<code>git reset --hard {id}</code>来解决；结果就是遇到大麻烦；<code>git reset --hard</code> 命令解释：强制返回到某次提交前的源码状态；用此命令一定要慎重！再慎重！以下是<code>git reset</code>时几种情况：</p>
+<h3 id="一-commit了全部修改内容-使用git-reset-hard-后情况"><a href="#一-commit了全部修改内容-使用git-reset-hard-后情况" class="headerlink" title="一.commit了全部修改内容 使用git reset --hard 后情况"></a>一.commit了全部修改内容 使用<code>git reset --hard</code> 后情况</h3><p>下图是我新建一个文件，修改了两个文件</p>
+</blockquote>
+<p><img src="/images/1.png" alt="Alt text"></p>
+<p>然后<code>add commit</code> 后<code>git log</code> 查看我commit的记录new hhh.js</p>
+<p><img src="/images/2.png" alt="Alt text"></p>
+<p>我们使用<code>git reset --hard 2460d...</code> ，即使我们在这之前push或者拉代码都会回退到这个版本之前，但是commit的代码依然存在，所以这个没有问题；</p>
+<h3 id="二-commit了部分代码，另一部分add了但没有commit"><a href="#二-commit了部分代码，另一部分add了但没有commit" class="headerlink" title="二.commit了部分代码，另一部分add了但没有commit"></a>二.commit了部分代码，另一部分add了但没有commit</h3><p>我只commit一个文件，add了另外两个文件；</p>
+<p><img src="/images/3.png" alt="Alt text"></p>
+<p>我们使用<code>git reset --hard {id}</code> 过后我们add的东西不见了，是不挺着急，这时候你用<code>git reflog</code> 查看版本记录再次回滚到commit记录下，发现没鸟用；这时候我们可以执行<code>git fsck --lost-found</code> 命令，然后你就可以在本地项目文件中路径为.git/lost-found/other中找到它们，你会发现你add的文件竟然藏在那里，是不是感觉棒棒哒！也可以通过<code>find .git/objects -type f | xargs ls -lt | sed 30q</code>这个命令，你就可以找到最近被你add到本地仓库的30个文件（切记不要太多，你会晕的；</p>
+<p><img src="/images/4.png" alt="Alt text"></p>
+<h3 id="三-commit了部分代码，另一部分没有add；"><a href="#三-commit了部分代码，另一部分没有add；" class="headerlink" title="三.commit了部分代码，另一部分没有add；"></a>三.commit了部分代码，另一部分没有add；</h3><p>执行<code>git reset --hard</code>后等同于执行delete命令一样（除非你能逆天）；这也是我同事遇到情况，但幸好他用VS Code编辑器有历史对比救了他一命，不然真的要从新写了！如果有哪位大神对这种情况有好的解决办法，求指教！</p>
+<h3 id="最后，一定要养成commit习惯！即使不commit也要多git-add几次也无妨！"><a href="#最后，一定要养成commit习惯！即使不commit也要多git-add几次也无妨！" class="headerlink" title="最后，一定要养成commit习惯！即使不commit也要多git add几次也无妨！"></a>最后，一定要养成commit习惯！即使不commit也要多git add几次也无妨！</h3>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/05/10/cookie的使用/" itemprop="url">
                   未命名
                 </a>
@@ -853,7 +959,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
