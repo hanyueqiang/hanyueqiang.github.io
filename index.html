@@ -336,120 +336,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/10/前端退出登录删除cookie信息/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-10T23:08:19+08:00" content="2017-05-10">
-              2017-05-10
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<p>title: 前端退出登录删除cookie信息<br>date: 2017-05-10 23:08:19</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><pre><code>function getCookie(name)
-  {
-    var arr,reg=new RegExp(&quot;(^| )&quot;+name+&quot;=([^;]*)(;|$)&quot;);
-    if(arr=document.cookie.match(reg))
-      return (arr[2]);
-    else
-      return null;
-  }
-  function delCookie(name){
-    var exp = new Date();
-    exp.setTime(exp.getTime() - 1);
-    var cval=getCookie(name);
-    if(cval!=null)
-      document.cookie= name + &quot;=cval;expires=&quot;+exp.toGMTString()+&quot;; path=/&quot;;
-  }
-  delCookie(&apos;remember_email&apos;);
-  delCookie(&apos;remember_check&apos;);
-  delCookie(&apos;remember_pwd&apos;);
-  delCookie(&apos;PHPSESSID&apos;);
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2017/03/31/json2-js使用/" itemprop="url">
                   json2.js使用
                 </a>
@@ -959,7 +845,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
