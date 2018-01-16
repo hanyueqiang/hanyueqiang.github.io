@@ -230,6 +230,133 @@
             
               
                 
+                <a class="post-title-link" href="/2018/01/16/退出登录删除cookie信息/" itemprop="url">
+                  退出登录删除cookie信息
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-01-16T23:20:16+08:00" content="2018-01-16">
+              2018-01-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="什么是cookie"><a href="#什么是cookie" class="headerlink" title="什么是cookie"></a>什么是cookie</h2><p>Cookie 是一些数据, 存储于你电脑上的文本文件中。<br>当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 “如何记录客户端的用户信息”</p>
+<h2 id="设置-cookie-值的函数"><a href="#设置-cookie-值的函数" class="headerlink" title="设置 cookie 值的函数"></a>设置 cookie 值的函数</h2><p>创建一个函数用于存储访问者的名字：</p>
+<pre><code>function setCookie(cname,cvalue,exdays)
+{
+      var d = new Date();
+      d.setTime(d.getTime()+(exdays*24*60*60*1000));
+      var expires = &quot;expires=&quot;+d.toGMTString();
+      document.cookie = cname + &quot;=&quot; + cvalue + &quot;; &quot; + expires;
+}
+</code></pre><h3 id="函数解析："><a href="#函数解析：" class="headerlink" title="函数解析："></a>函数解析：</h3><p>以上的函数参数中，cookie 的名称为 cname，cookie 的值为 cvalue，并设置了 cookie 的过期时间 expires。<br>该函数设置了 cookie 名、cookie 值、cookie过期时间。</p>
+<h2 id="获取-cookie-值的函数"><a href="#获取-cookie-值的函数" class="headerlink" title="获取 cookie 值的函数"></a>获取 cookie 值的函数</h2><pre><code>function getCookie(cname)
+{
+  var name = cname + &quot;=&quot;;
+  var ca = document.cookie.split(&apos;;&apos;);
+  for(var i=0; i&lt;ca.length; i++) 
+  {
+    var c = ca[i].trim();
+    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+  return &quot;&quot;;
+}
+
+//two
+function getCookie(name)
+  {
+    var arr,reg=new RegExp(&quot;(^| )&quot;+name+&quot;=([^;]*)(;|$)&quot;);
+    if(arr=document.cookie.match(reg))
+      return (arr[2]);
+    else
+      return null;
+  }
+</code></pre><h3 id="函数解析：-1"><a href="#函数解析：-1" class="headerlink" title="函数解析："></a>函数解析：</h3><p>cookie 名的参数为 cname。<br>创建一个文本变量用于检索指定 cookie :cname + “=”。<br>使用分号来分割 document.cookie 字符串，并将分割后的字符串数组赋值给 ca (ca = document.cookie.split(‘;’))。<br>循环 ca 数组 (i=0;i&lt;ca.length;i++)，然后读取数组中的每个值，并去除前后空格 (c=ca[i].trim())。<br>如果找到 cookie(c.indexOf(name) == 0)，返回 cookie 的值 (c.substring(name.length,c.length)。<br>如果没有找到 cookie, 返回 “”。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/01/16/退出登录删除cookie信息/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/10/16/gitReset探索之路/" itemprop="url">
                   gitReset探索之路
                 </a>
@@ -845,7 +972,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
