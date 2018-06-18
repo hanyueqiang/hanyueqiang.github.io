@@ -230,6 +230,123 @@
             
               
                 
+                <a class="post-title-link" href="/2018/06/18/深入webpack技术栈-一/" itemprop="url">
+                  深入webpack技术栈(一)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-06-18T23:25:09+08:00" content="2018-06-18">
+              2018-06-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="webpack4-x深入与实践（一）"><a href="#webpack4-x深入与实践（一）" class="headerlink" title="webpack4.x深入与实践（一）"></a>webpack4.x深入与实践（一）</h1><h2 id="一-对webpack理解"><a href="#一-对webpack理解" class="headerlink" title="一.对webpack理解"></a>一.对webpack理解</h2><p>是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。可以将多种静态资源 js、css、less 转换成一个静态文件，减少了页面的请求。</p>
+<p>##二.安装和命令行<br>1、新建一个目录，进入目录，初始化</p>
+<p>cd 到指定文件夹执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></p>
+<p>2、安装</p>
+<p>全局安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
+<p>在输出版本时，显示需安装webpack-cli<br><img src="./images/01.png" alt="avatar"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-cli -g</div></pre></td></tr></table></figure>
+<p>输出版本<br><img src="./images/02.png" alt="avatar"></p>
+<p>局部安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install webpack-cli --save-dev</div></pre></td></tr></table></figure></p>
+<p><strong><em>注意</em></strong></p>
+<p>在webpack v3.x 版本使用<br><code>webpack hello.js hello.min.js</code><br>会把hello.js 默认打包成文件hello.min.js<br>但是在当前v4.x版本会报错，显示没有mode项，默认有production和development两种，我们输入<br><code>webpack --mode development</code> 依然有错，这是因为<strong>webpack4.x以目录下./src/index.js作为入口</strong>，需要新建src目录hello.js改为index.js,<strong>同时webpack4.x不支持webpack 文件a 文件b打包方式，而是直接运行webpack –mode development 或者 webpack –mode production</strong>,这样会默认打包，入口文件是<code>./src/index.js</code>,但是这样会很麻烦，我们在package.json中配置一下</p>
+<p><img src="./images/03.png" alt="avatar"></p>
+<p>这样每次执行<code>npm run dev</code></p>
+<p>在处理css文件需要依赖loader<br><code>npm install css-loader style-loader --save-dev</code><br>css-loader : 使webpack可以处理css文件</p>
+<p>style-loader : 新建一个css标签,使css-loader 处理过的文件放进去，然后插入html标签中<br>安装后可以配置到webpack命令中 也可以手动添加 </p>
+<p><img src="./images/04.png" alt="avatar"></p>
+<p>在命令行：<br><code>webpack --mode development --module-bind &#39;css=style-loader!css-loader&#39; --watch</code></p>
+<p>–watch: 监听，每次保存自动执行</p>
+<p>还有一些参数有需要配置<br><code>webpack --mode development --module-bind &#39;css=style-loader!css-loader&#39; --progress --display-modules --display-resons</code> </p>
+<p>–progress:出现有进度条打包过程</p>
+<p>– display-modules: 会把所有模块列出来</p>
+<p>–diplay-resons : 列出法打包原因</p>
+<p>今天总结到这里，看世界杯了！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/01/17/基于jquery-jquery-ui邮箱输入联想开发总结/" itemprop="url">
                   基于jquery/jquery-ui邮箱输入联想开发总结
                 </a>
@@ -1153,7 +1270,7 @@ function getCookie(name)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -84,28 +84,21 @@
 
 
 
-<meta name="description" content="什么是cookieCookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 “如何记录客户端的用户信息”
-设置 cookie 值的函数创建一个函数用于存储访问者的名字：
-function setCookie(cname,cvalue,exdays)
-{
-      var d =">
+<meta name="description" content="webpack4.x深入与实践（一）一.对webpack理解是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。可以将多种静态资源 js、css、less">
 <meta property="og:type" content="article">
-<meta property="og:title" content="退出登录删除cookie信息">
-<meta property="og:url" content="http://yoursite.com/2018/01/16/退出登录删除cookie信息/index.html">
+<meta property="og:title" content="深入webpack技术栈(一)">
+<meta property="og:url" content="http://yoursite.com/2018/06/18/深入webpack技术栈-一/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="什么是cookieCookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 “如何记录客户端的用户信息”
-设置 cookie 值的函数创建一个函数用于存储访问者的名字：
-function setCookie(cname,cvalue,exdays)
-{
-      var d =">
-<meta property="og:updated_time" content="2018-01-16T15:56:28.862Z">
+<meta property="og:description" content="webpack4.x深入与实践（一）一.对webpack理解是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。可以将多种静态资源 js、css、less">
+<meta property="og:image" content="http://yoursite.com/./images/01.png">
+<meta property="og:image" content="http://yoursite.com/./images/02.png">
+<meta property="og:image" content="http://yoursite.com/./images/03.png">
+<meta property="og:image" content="http://yoursite.com/./images/04.png">
+<meta property="og:updated_time" content="2018-06-18T15:33:29.579Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="退出登录删除cookie信息">
-<meta name="twitter:description" content="什么是cookieCookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 “如何记录客户端的用户信息”
-设置 cookie 值的函数创建一个函数用于存储访问者的名字：
-function setCookie(cname,cvalue,exdays)
-{
-      var d =">
+<meta name="twitter:title" content="深入webpack技术栈(一)">
+<meta name="twitter:description" content="webpack4.x深入与实践（一）一.对webpack理解是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。可以将多种静态资源 js、css、less">
+<meta name="twitter:image" content="http://yoursite.com/./images/01.png">
 
 
 
@@ -123,7 +116,7 @@ function setCookie(cname,cvalue,exdays)
   };
 </script>
 
-  <title> 退出登录删除cookie信息 | Hexo </title>
+  <title> 深入webpack技术栈(一) | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -243,7 +236,7 @@ function setCookie(cname,cvalue,exdays)
             
             
               
-                退出登录删除cookie信息
+                深入webpack技术栈(一)
               
             
           </h1>
@@ -255,8 +248,8 @@ function setCookie(cname,cvalue,exdays)
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-01-16T23:20:16+08:00" content="2018-01-16">
-              2018-01-16
+            <time itemprop="dateCreated" datetime="2018-06-18T23:25:09+08:00" content="2018-06-18">
+              2018-06-18
             </time>
           </span>
 
@@ -283,64 +276,30 @@ function setCookie(cname,cvalue,exdays)
       
 
       
-        <h2 id="什么是cookie"><a href="#什么是cookie" class="headerlink" title="什么是cookie"></a>什么是cookie</h2><p>Cookie 是一些数据, 存储于你电脑上的文本文件中。<br>当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 “如何记录客户端的用户信息”</p>
-<h2 id="设置-cookie-值的函数"><a href="#设置-cookie-值的函数" class="headerlink" title="设置 cookie 值的函数"></a>设置 cookie 值的函数</h2><p>创建一个函数用于存储访问者的名字：</p>
-<pre><code>function setCookie(cname,cvalue,exdays)
-{
-      var d = new Date();
-      d.setTime(d.getTime()+(exdays*24*60*60*1000));
-      var expires = &quot;expires=&quot;+d.toGMTString();
-      document.cookie = cname + &quot;=&quot; + cvalue + &quot;; &quot; + expires;
-}
-</code></pre><h3 id="函数解析："><a href="#函数解析：" class="headerlink" title="函数解析："></a>函数解析：</h3><p>以上的函数参数中，cookie 的名称为 cname，cookie 的值为 cvalue，并设置了 cookie 的过期时间 expires。<br>该函数设置了 cookie 名、cookie 值、cookie过期时间。</p>
-<h2 id="获取-cookie-值的函数"><a href="#获取-cookie-值的函数" class="headerlink" title="获取 cookie 值的函数"></a>获取 cookie 值的函数</h2><pre><code>function getCookie(cname)
-{
-  var name = cname + &quot;=&quot;;
-  var ca = document.cookie.split(&apos;;&apos;);
-  for(var i=0; i&lt;ca.length; i++) 
-  {
-    var c = ca[i].trim();
-    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
-  }
-  return &quot;&quot;;
-}
-
-//two
-function getCookie(name)
-  {
-    var arr,reg=new RegExp(&quot;(^| )&quot;+name+&quot;=([^;]*)(;|$)&quot;);
-    if(arr=document.cookie.match(reg))
-      return (arr[2]);
-    else
-      return null;
-  }
-</code></pre><h3 id="函数解析：-1"><a href="#函数解析：-1" class="headerlink" title="函数解析："></a>函数解析：</h3><p>cookie 名的参数为 cname。<br>创建一个文本变量用于检索指定 cookie :cname + “=”。<br>使用分号来分割 document.cookie 字符串，并将分割后的字符串数组赋值给 ca (ca = document.cookie.split(‘;’))。<br>循环 ca 数组 (i=0;i&lt;ca.length;i++)，然后读取数组中的每个值，并去除前后空格 (c=ca[i].trim())。<br>如果找到 cookie(c.indexOf(name) == 0)，返回 cookie 的值 (c.substring(name.length,c.length)。<br>如果没有找到 cookie, 返回 “”。</p>
-<a id="more"></a>
-<h2 id="检测-cookie-值的函数"><a href="#检测-cookie-值的函数" class="headerlink" title="检测 cookie 值的函数"></a>检测 cookie 值的函数</h2><p>创建一个检测 cookie 是否创建的函数。<br>如果设置了 cookie，将显示一个问候信息。<br>如果没有设置 cookie，将会显示一个弹窗用于询问访问者的名字，并调用 setCookie 函数将访问者的名字存储 365 天：</p>
-<pre><code>function checkCookie()
-{
-  var username=getCookie(&quot;username&quot;);
-  if (username!=&quot;&quot;)
-  {
-    alert(&quot;Welcome again &quot; + username);
-  }
-  else 
-  {
-    username = prompt(&quot;Please enter your name:&quot;,&quot;&quot;);
-    if (username!=&quot;&quot; &amp;&amp; username!=null)
-    {
-      setCookie(&quot;username&quot;,username,365);
-    }
-  }
-}
-</code></pre><h2 id="删除cookie函数"><a href="#删除cookie函数" class="headerlink" title="删除cookie函数"></a>删除cookie函数</h2><pre><code>function delCookie(name){
-    var exp = new Date();
-    exp.setTime(exp.getTime() - 1);
-    var cval=getCookie(name);
-    if(cval!=null)
-      document.cookie= name + &quot;=cval;expires=&quot;+exp.toGMTString()+&quot;; path=/&quot;;
-  }
-</code></pre><h5 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址:"></a>参考地址:</h5><p>  <a href="http://www.runoob.com/js/js-cookies.html" target="_blank" rel="external">http://www.runoob.com/js/js-cookies.html</a> </p>
+        <h1 id="webpack4-x深入与实践（一）"><a href="#webpack4-x深入与实践（一）" class="headerlink" title="webpack4.x深入与实践（一）"></a>webpack4.x深入与实践（一）</h1><h2 id="一-对webpack理解"><a href="#一-对webpack理解" class="headerlink" title="一.对webpack理解"></a>一.对webpack理解</h2><p>是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。可以将多种静态资源 js、css、less 转换成一个静态文件，减少了页面的请求。</p>
+<p>##二.安装和命令行<br>1、新建一个目录，进入目录，初始化</p>
+<p>cd 到指定文件夹执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></p>
+<p>2、安装</p>
+<p>全局安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
+<p>在输出版本时，显示需安装webpack-cli<br><img src="./images/01.png" alt="avatar"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack-cli -g</div></pre></td></tr></table></figure>
+<p>输出版本<br><img src="./images/02.png" alt="avatar"></p>
+<p>局部安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install webpack-cli --save-dev</div></pre></td></tr></table></figure></p>
+<p><strong><em>注意</em></strong></p>
+<p>在webpack v3.x 版本使用<br><code>webpack hello.js hello.min.js</code><br>会把hello.js 默认打包成文件hello.min.js<br>但是在当前v4.x版本会报错，显示没有mode项，默认有production和development两种，我们输入<br><code>webpack --mode development</code> 依然有错，这是因为<strong>webpack4.x以目录下./src/index.js作为入口</strong>，需要新建src目录hello.js改为index.js,<strong>同时webpack4.x不支持webpack 文件a 文件b打包方式，而是直接运行webpack –mode development 或者 webpack –mode production</strong>,这样会默认打包，入口文件是<code>./src/index.js</code>,但是这样会很麻烦，我们在package.json中配置一下</p>
+<p><img src="./images/03.png" alt="avatar"></p>
+<p>这样每次执行<code>npm run dev</code></p>
+<p>在处理css文件需要依赖loader<br><code>npm install css-loader style-loader --save-dev</code><br>css-loader : 使webpack可以处理css文件</p>
+<p>style-loader : 新建一个css标签,使css-loader 处理过的文件放进去，然后插入html标签中<br>安装后可以配置到webpack命令中 也可以手动添加 </p>
+<p><img src="./images/04.png" alt="avatar"></p>
+<p>在命令行：<br><code>webpack --mode development --module-bind &#39;css=style-loader!css-loader&#39; --watch</code></p>
+<p>–watch: 监听，每次保存自动执行</p>
+<p>还有一些参数有需要配置<br><code>webpack --mode development --module-bind &#39;css=style-loader!css-loader&#39; --progress --display-modules --display-resons</code> </p>
+<p>–progress:出现有进度条打包过程</p>
+<p>– display-modules: 会把所有模块列出来</p>
+<p>–diplay-resons : 列出法打包原因</p>
+<p>今天总结到这里，看世界杯了！</p>
 
       
     </div>
@@ -365,17 +324,13 @@ function getCookie(name)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/16/gitReset探索之路/" rel="next" title="gitReset探索之路">
-                <i class="fa fa-chevron-left"></i> gitReset探索之路
+              <a href="/2018/01/17/基于jquery-jquery-ui邮箱输入联想开发总结/" rel="next" title="基于jquery/jquery-ui邮箱输入联想开发总结">
+                <i class="fa fa-chevron-left"></i> 基于jquery/jquery-ui邮箱输入联想开发总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/17/基于jquery-jquery-ui邮箱输入联想开发总结/" rel="prev" title="基于jquery/jquery-ui邮箱输入联想开发总结">
-                基于jquery/jquery-ui邮箱输入联想开发总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,7 +430,7 @@ function getCookie(name)
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是cookie"><span class="nav-number">1.</span> <span class="nav-text">什么是cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置-cookie-值的函数"><span class="nav-number">2.</span> <span class="nav-text">设置 cookie 值的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数解析："><span class="nav-number">2.1.</span> <span class="nav-text">函数解析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-cookie-值的函数"><span class="nav-number">3.</span> <span class="nav-text">获取 cookie 值的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数解析：-1"><span class="nav-number">3.1.</span> <span class="nav-text">函数解析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测-cookie-值的函数"><span class="nav-number">4.</span> <span class="nav-text">检测 cookie 值的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除cookie函数"><span class="nav-number">5.</span> <span class="nav-text">删除cookie函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参考地址"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">参考地址:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack4-x深入与实践（一）"><span class="nav-number">1.</span> <span class="nav-text">webpack4.x深入与实践（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-对webpack理解"><span class="nav-number">1.1.</span> <span class="nav-text">一.对webpack理解</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
