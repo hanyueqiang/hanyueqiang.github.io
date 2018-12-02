@@ -40,7 +40,6 @@ a {
     margin: 0 8px;
     font-size: 18px;
     transition: all 0.5s;
-    width: 120px;
 }
 .btn-default:hover {
     color: #f6f6f6;
